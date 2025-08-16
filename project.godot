@@ -13,3 +13,14 @@ config_version=5
 config/name="ProgGame"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=768
+window/size/viewport_height=1366
+window/stretch/mode="viewport"
+window/handheld/orientation=1
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
