@@ -1,3 +1,151 @@
-[gd_scene format=3 uid="uid://csli14h43cd68"]
+[gd_scene load_steps=3 format=3 uid="uid://csli14h43cd68"]
+
+[ext_resource type="FontFile" uid="uid://btuoig5w2vnbt" path="res://Assets/Fonts/Kurland.ttf" id="1_ssm1p"]
+[ext_resource type="Texture2D" uid="uid://56u8a7yf5ebv" path="res://Assets/Icon-Textures/TestProgGame.png" id="2_k58mr"]
 
 [node name="LevelTemplate" type="Node2D"]
+
+[node name="ControlObjs" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 768.0
+offset_bottom = 1366.0
+
+[node name="BG" type="Control" parent="ControlObjs"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG_Color" type="ColorRect" parent="ControlObjs/BG"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0807833, 0.0807833, 0.0807833, 1)
+
+[node name="LabelQuestions" type="Control" parent="ControlObjs"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 206.0
+grow_horizontal = 2
+
+[node name="LabelQuest" type="Label" parent="ControlObjs/LabelQuestions"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_ssm1p")
+theme_override_font_sizes/font_size = 45
+text = "¿Cuál de estos códigos genera la secuencia 2 - 4 - 6 - 8 - 10?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ImgAnswers" type="Control" parent="ControlObjs"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1091.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="GridContainer" type="GridContainer" parent="ControlObjs/ImgAnswers"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 44.0
+offset_top = 16.0
+offset_right = 44.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 420
+theme_override_constants/v_separation = 550
+columns = 2
+
+[node name="ImgOption1" type="Control" parent="ControlObjs/ImgAnswers/GridContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlObjs/ImgAnswers/GridContainer/ImgOption1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LabelInfo" type="Label" parent="ControlObjs/ImgAnswers/GridContainer/ImgOption1/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ssm1p")
+theme_override_font_sizes/font_size = 40
+text = "Opcion 1"
+horizontal_alignment = 1
+
+[node name="Img" type="TextureRect" parent="ControlObjs/ImgAnswers/GridContainer/ImgOption1/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_k58mr")
+
+[node name="ImgOption2" type="Control" parent="ControlObjs/ImgAnswers/GridContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlObjs/ImgAnswers/GridContainer/ImgOption2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LabelInfo" type="Label" parent="ControlObjs/ImgAnswers/GridContainer/ImgOption2/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ssm1p")
+theme_override_font_sizes/font_size = 40
+text = "Opcion 1"
+horizontal_alignment = 1
+
+[node name="Img" type="TextureRect" parent="ControlObjs/ImgAnswers/GridContainer/ImgOption2/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_k58mr")
+
+[node name="ImgOption3" type="Control" parent="ControlObjs/ImgAnswers/GridContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlObjs/ImgAnswers/GridContainer/ImgOption3"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LabelInfo" type="Label" parent="ControlObjs/ImgAnswers/GridContainer/ImgOption3/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ssm1p")
+theme_override_font_sizes/font_size = 40
+text = "Opcion 1"
+horizontal_alignment = 1
+
+[node name="Img" type="TextureRect" parent="ControlObjs/ImgAnswers/GridContainer/ImgOption3/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_k58mr")
+
+[node name="ImgOption4" type="Control" parent="ControlObjs/ImgAnswers/GridContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlObjs/ImgAnswers/GridContainer/ImgOption4"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LabelInfo" type="Label" parent="ControlObjs/ImgAnswers/GridContainer/ImgOption4/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ssm1p")
+theme_override_font_sizes/font_size = 40
+text = "Opcion 1"
+horizontal_alignment = 1
+
+[node name="Img" type="TextureRect" parent="ControlObjs/ImgAnswers/GridContainer/ImgOption4/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_k58mr")
