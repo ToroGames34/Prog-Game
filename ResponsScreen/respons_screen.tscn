@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdmkhs1e1t270"]
+
+[ext_resource type="Script" uid="uid://xuvlb7cc223s" path="res://ResponsScreen/respons_screen.gd" id="1_kq3r0"]
+[ext_resource type="Texture2D" uid="uid://cl7ru47jfgx4c" path="res://Assets/Icon-Textures/Correct_1.png" id="1_thjm7"]
+[ext_resource type="Texture2D" uid="uid://bj2x36q573r1r" path="res://Assets/Icon-Textures/Incorrect_1.png" id="2_kq3r0"]
+[ext_resource type="FontFile" uid="uid://btuoig5w2vnbt" path="res://Assets/Fonts/Kurland.ttf" id="4_uagog"]
+
+[node name="ResponsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kq3r0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.0
+offset_top = -278.5
+offset_right = 325.0
+offset_bottom = 278.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2, 0.2, 0.2, 0.690196)
+
+[node name="Correct" type="TextureRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(325, 325)
+texture = ExtResource("1_thjm7")
+expand_mode = 1
+
+[node name="Incorrect" type="TextureRect" parent="ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(325, 325)
+texture = ExtResource("2_kq3r0")
+expand_mode = 1
+
+[node name="ButtonAccept" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -90.0
+offset_top = -227.0
+offset_right = 90.0
+offset_bottom = -176.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_uagog")
+theme_override_font_sizes/font_size = 40
+text = "ACEPTAR"
+
+[connection signal="pressed" from="ButtonAccept" to="." method="_on_button_accept_pressed"]

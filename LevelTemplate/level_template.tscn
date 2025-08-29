@@ -1,9 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://csli14h43cd68"]
+[gd_scene load_steps=7 format=3 uid="uid://csli14h43cd68"]
 
+[ext_resource type="Script" uid="uid://b4bft5pusonoa" path="res://LevelTemplate/level_template.gd" id="1_lw321"]
 [ext_resource type="FontFile" uid="uid://btuoig5w2vnbt" path="res://Assets/Fonts/Kurland.ttf" id="1_ssm1p"]
-[ext_resource type="Texture2D" uid="uid://56u8a7yf5ebv" path="res://Assets/Icon-Textures/TestProgGame.png" id="2_k58mr"]
+[ext_resource type="Texture2D" uid="uid://ialh12g33v7d" path="res://Assets/2 - 4 - 6 - 8 - 10/Screenshot 2025-08-22 173045.png" id="2_hyjmn"]
+[ext_resource type="Texture2D" uid="uid://bw2owivpdleag" path="res://Assets/2 - 4 - 6 - 8 - 10/Screenshot 2025-08-22 173126.png" id="3_lw321"]
+[ext_resource type="Texture2D" uid="uid://8dgqoixt2alr" path="res://Assets/2 - 4 - 6 - 8 - 10/Screenshot 2025-08-22 173145.png" id="4_0k4pj"]
+[ext_resource type="Texture2D" uid="uid://x7pmp5vlm7jh" path="res://Assets/2 - 4 - 6 - 8 - 10/Screenshot 2025-08-22 173213.png" id="5_cn8h2"]
 
 [node name="LevelTemplate" type="Node2D"]
+script = ExtResource("1_lw321")
 
 [node name="ControlObjs" type="Control" parent="."]
 layout_mode = 3
@@ -64,14 +69,12 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 44.0
-offset_top = 16.0
-offset_right = 44.0
-offset_bottom = 16.0
+offset_left = 18.0
+offset_right = 18.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/h_separation = 420
-theme_override_constants/v_separation = 550
+theme_override_constants/v_separation = 425
 columns = 2
 
 [node name="ImgOption1" type="Control" parent="ControlObjs/ImgAnswers/GridContainer"]
@@ -91,7 +94,8 @@ horizontal_alignment = 1
 
 [node name="Img" type="TextureRect" parent="ControlObjs/ImgAnswers/GridContainer/ImgOption1/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_k58mr")
+texture = ExtResource("2_hyjmn")
+stretch_mode = 4
 
 [node name="ImgOption2" type="Control" parent="ControlObjs/ImgAnswers/GridContainer"]
 layout_mode = 2
@@ -105,12 +109,12 @@ offset_bottom = 40.0
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_ssm1p")
 theme_override_font_sizes/font_size = 40
-text = "Opcion 1"
+text = "Opcion 2"
 horizontal_alignment = 1
 
 [node name="Img" type="TextureRect" parent="ControlObjs/ImgAnswers/GridContainer/ImgOption2/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_k58mr")
+texture = ExtResource("3_lw321")
 
 [node name="ImgOption3" type="Control" parent="ControlObjs/ImgAnswers/GridContainer"]
 layout_mode = 2
@@ -124,12 +128,12 @@ offset_bottom = 40.0
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_ssm1p")
 theme_override_font_sizes/font_size = 40
-text = "Opcion 1"
+text = "Opcion 3"
 horizontal_alignment = 1
 
 [node name="Img" type="TextureRect" parent="ControlObjs/ImgAnswers/GridContainer/ImgOption3/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_k58mr")
+texture = ExtResource("4_0k4pj")
 
 [node name="ImgOption4" type="Control" parent="ControlObjs/ImgAnswers/GridContainer"]
 layout_mode = 2
@@ -143,9 +147,9 @@ offset_bottom = 40.0
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_ssm1p")
 theme_override_font_sizes/font_size = 40
-text = "Opcion 1"
+text = "Opcion 4"
 horizontal_alignment = 1
 
 [node name="Img" type="TextureRect" parent="ControlObjs/ImgAnswers/GridContainer/ImgOption4/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_k58mr")
+texture = ExtResource("5_cn8h2")
